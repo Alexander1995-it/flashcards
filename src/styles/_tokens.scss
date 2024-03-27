@@ -1,0 +1,8 @@
+:root {
+  /* transitions */
+  --transition-duration-basic: 200ms;
+
+  /* outlines */
+  --color-outline-focus: var(--color-info-900);
+  --outline-focus: 2px solid var(--color-outline-focus);
+}
