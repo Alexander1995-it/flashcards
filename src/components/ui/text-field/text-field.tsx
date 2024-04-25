@@ -34,7 +34,6 @@ export const TextField = ({ className, errorMessage, onChange, search, type }: T
   const finalType = showPassword && type === 'password' ? 'text' : type
 
   const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
-  const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e)
   }
 

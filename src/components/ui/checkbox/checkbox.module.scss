@@ -1,0 +1,51 @@
+.container {
+  display: inline-block;
+
+  .label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &.disabled {
+      cursor: initial;
+      color: var(--color-dark-100);
+    }
+  }
+
+  .wrapperCheckbox {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    &.disabled {
+      cursor: initial;
+    }
+
+    .root {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 18px;
+      height: 18px;
+
+      background-color: var(--color-dark-900);
+      border: 2px solid var(--color-light-900);
+      border-radius: 2px;
+    }
+
+    .indicator {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
