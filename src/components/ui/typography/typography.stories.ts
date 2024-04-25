@@ -66,56 +66,56 @@ export const Body1: Story = {
   },
 }
 
-export const Body2: Story = {
+export const _Body2: Story = {
   args: {
     children: 'Card content',
     variant: 'body2',
   },
 }
 
-export const Subtitle1: Story = {
+export const _Subtitle1: Story = {
   args: {
     children: 'Card content',
     variant: 'subtitle1',
   },
 }
 
-export const Subtitle2: Story = {
+export const _Subtitle2: Story = {
   args: {
     children: 'Card content',
     variant: 'subtitle2',
   },
 }
 
-export const Caption: Story = {
+export const _Caption: Story = {
   args: {
     children: 'Card content',
     variant: 'caption',
   },
 }
 
-export const Overline: Story = {
+export const _Overline: Story = {
   args: {
     children: 'Card content',
     variant: 'overline',
   },
 }
 
-export const Link1: Story = {
+export const _Link1: Story = {
   args: {
     children: 'Card content',
     variant: 'link1',
   },
 }
 
-export const Link2: Story = {
+export const _Link2: Story = {
   args: {
     children: 'Card content',
     variant: 'link2',
   },
 }
 
-export const Error: Story = {
+export const _Error: Story = {
   args: {
     children: 'Card content',
     variant: 'error',

@@ -1,0 +1,73 @@
+.fieldContainer {
+  position: relative;
+  width: 100%;
+
+  .field {
+    width: 100%;
+    padding: 6px 12px;
+
+    color: var(--color-dark-100);
+
+    background: transparent;
+    border: 1px solid var(--color-dark-300);
+    border-radius: 2px;
+    outline: 0;
+
+    &:focus-visible {
+      color: var(--color-light-100);
+      outline: 1px solid var(--color-info-700);
+    }
+
+    &.hasSearchIcon {
+      padding-left: 41px;
+    }
+
+    &.error {
+      color: var(--color-danger-300);
+      outline: 1px solid var(--color-danger-300);
+    }
+  }
+
+  &:hover {
+    background: var(--color-dark-700);
+  }
+
+  .showPassword {
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    outline: 0;
+
+    &:focus-visible {
+      outline: var(--outline-focus);
+    }
+  }
+
+  .searchIcon {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    margin-left: 12px;
+
+    &:focus-visible {
+      outline: 1px solid var(--color-info-700);
+
+      //outline: var(--outline-focus);
+    }
+  }
+}
