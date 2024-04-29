@@ -2,6 +2,7 @@ import { ChangeEvent, ComponentPropsWithoutRef, useState } from 'react'
 
 import { Eye, EyeOff, Search } from '@/assets'
 import { Typography } from '@/components'
+import * as LabelRadix from '@radix-ui/react-label'
 import clsx from 'clsx'
 
 import s from './text-field.module.scss'
@@ -43,22 +44,24 @@ export const TextField = ({ className, errorMessage, onChange, search, type }: T
         {search && <Search className={classNames.searchIcon} isFocused={isFocused} />}
         <input
           className={classNames.field}
+          id={'textField'}
           onBlur={handleBlur}
           onChange={handlerChange}
           onFocus={handleFocus}
           type={finalType}
         />
-        {isButtonShowPassword && (
-          <button
-            className={s.showPassword}
-            onClick={e => {
-              e.preventDefault()
-              setShowPassword(prev => !prev)
-            }}
-          >
-            {showPassword ? <Eye isFocused={isFocused} /> : <EyeOff isFocused={isFocused} />}
-          </button>
-        )}
+        <LabelRadix.Root htmlFor={'textField'}>
+          {isButtonShowPassword && (
+            <button
+              className={s.showPassword}
+              onClick={() => {
+                setShowPassword(prev => !prev)
+              }}
+            >
+              {showPassword ? <Eye isFocused={isFocused} /> : <EyeOff isFocused={isFocused} />}
+            </button>
+          )}
+        </LabelRadix.Root>
       </div>
       <Typography className={classNames.error} variant={'error'}>
         {errorMessage}
