@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import s from './text-field.module.scss'
 
-type TextFieldProps = {
+export type TextFieldProps = {
   errorMessage?: string
   label?: string
   search?: boolean
