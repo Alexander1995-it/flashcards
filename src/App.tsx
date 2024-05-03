@@ -1,5 +1,11 @@
+import { SignIn } from '@/components'
+
 export function App() {
-  return <div>Hello</div>
+  return (
+    <div>
+      <SignIn />
+    </div>
+  )
 }
 
 export default App

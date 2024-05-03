@@ -1,4 +1,4 @@
-import { ElementType, ReactNode } from 'react'
+import { ComponentProps, ElementType, ReactNode } from 'react'
 
 import clsx from 'clsx'
 
@@ -22,7 +22,7 @@ type TypographyProps<T extends ElementType> = {
     | 'overline'
     | 'subtitle1'
     | 'subtitle2'
-}
+} & ComponentProps<T>
 export const Typography = <T extends ElementType = 'p'>(props: TypographyProps<T>) => {
   const { as, className, variant = 'body1', ...restProps } = props
   const classNames = clsx(s[variant], className)

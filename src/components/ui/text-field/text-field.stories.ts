@@ -19,6 +19,7 @@ export const Default: Story = {
 
 export const Password: Story = {
   args: {
+    label: 'Password',
     placeholder: 'Password',
     type: 'password',
   },
