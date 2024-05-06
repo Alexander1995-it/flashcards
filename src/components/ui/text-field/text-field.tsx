@@ -1,4 +1,4 @@
-import { ChangeEvent, ComponentPropsWithoutRef, forwardRef, useState } from 'react'
+import { ChangeEvent, ComponentProps, ComponentPropsWithoutRef, forwardRef, useState } from 'react'
 
 import { Eye, EyeOff, Search } from '@/assets'
 import { Typography } from '@/components'
@@ -7,17 +7,22 @@ import clsx from 'clsx'
 import s from './text-field.module.scss'
 
 export type TextFieldProps = {
+  containerProps?: ComponentProps<'div'>
   errorMessage?: string
   label?: string
   search?: boolean
 } & ComponentPropsWithoutRef<'input'>
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ className, errorMessage, id, label, onChange, search, type, ...restProps }, ref) => {
+  (
+    { className, containerProps, errorMessage, id, label, onChange, search, type, ...restProps },
+    ref
+  ) => {
     const classNames = {
       error: clsx(s.error),
       field: clsx(s.field, errorMessage && s.error, search && s.hasSearchIcon, className),
       fieldContainer: clsx(s.fieldContainer),
       label: clsx(s.label),
+      root: clsx(s.root, containerProps?.className),
       searchIcon: clsx(s.searchIcon),
     }
 
@@ -41,7 +46,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     }
 
     return (
-      <div>
+      <div className={classNames.root}>
         {label && (
           <Typography as={'label'} className={classNames.label} variant={'body2'}>
             {label}
@@ -64,6 +69,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               onClick={() => {
                 setShowPassword(prev => !prev)
               }}
+              type={'button'}
             >
               {showPassword ? <Eye isFocused={isFocused} /> : <EyeOff isFocused={isFocused} />}
             </button>

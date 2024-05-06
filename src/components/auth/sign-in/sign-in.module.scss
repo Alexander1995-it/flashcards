@@ -1,0 +1,59 @@
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 33px 36px 29px;
+
+  .title {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .form {
+    //display: flex;
+    //flex-direction: column;
+
+    .fieldEmail {
+      margin-bottom: 20px;
+    }
+
+    .fieldPassword {
+      margin-bottom: 20px;
+    }
+
+    .rememberMe {
+      margin-bottom: 35px;
+    }
+  }
+
+  .recoverPasswordLinkWrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    .recoverPasswordLink {
+      margin-bottom: 65px;
+      text-align: right;
+      text-decoration: none;
+    }
+  }
+
+  .button {
+    margin-bottom: 20px;
+  }
+
+  .caption {
+    margin-bottom: 11px;
+    color: var(--color-light-900);
+    text-align: center;
+  }
+
+  .signUpLinkWrapper {
+    display: flex;
+    justify-content: center;
+
+    .signUpLink {
+      font-size: var(--font-size-m);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary-500);
+    }
+  }
+}

@@ -43,7 +43,7 @@ export const Checkbox = forwardRef<ElementRef<typeof CheckboxRadix.Root>, Checkb
                 </CheckboxRadix.Indicator>
               </CheckboxRadix.Root>
             </div>
-            {label}
+            <div className={s.textLabel}>{label}</div>
           </Typography>
         </LabelRadix.Root>
       </div>
