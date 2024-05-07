@@ -1,25 +1,26 @@
 .card {
   max-width: 420px;
-  margin-bottom: 30px;
   padding: 30px 35px;
 
   .title {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     text-align: center;
   }
 
-  .textField {
+  .fieldEmail {
     margin-bottom: 20px;
   }
 
-  .instructions {
-    margin-bottom: 65px;
-    color: var(--color-light-900);
-    opacity: 0.5;
+  .fieldPassword {
+    margin-bottom: 20px;
+  }
+
+  .passwordConfirmation {
+    margin-bottom: 35px;
   }
 
   .button {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .caption {
@@ -28,12 +29,12 @@
     text-align: center;
   }
 
-  .loginLink {
+  .signInLink {
     display: flex;
     justify-content: center;
 
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-bold);
-    color: var(--color-accent-500);
+    color: var(--color-primary-500);
   }
 }
