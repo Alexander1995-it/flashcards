@@ -15,8 +15,10 @@ const loginSchema = z.object({
 })
 
 type FormValues = z.infer<typeof loginSchema>
-
-export const SignIn = () => {
+type SignInProps = {
+  onSubmit: (data: FormValues) => void
+}
+export const SignIn = (props: SignInProps) => {
   const {
     control,
     formState: { errors },
@@ -31,7 +33,7 @@ export const SignIn = () => {
   })
 
   const onSubmit = (data: FormValues) => {
-    console.log(data)
+    props.onSubmit(data)
   }
 
   return (

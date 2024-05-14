@@ -22,11 +22,11 @@ export const Default = {
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell>{'item.title'}</TableCell>
-            <TableCell>{'item.description'}</TableCell>
-            <TableCell>{'item.link'}</TableCell>
-            <TableCell>{'item.category'}</TableCell>
-            <TableCell>{'item.type'}</TableCell>
+            <TableCell>{'Text'}</TableCell>
+            <TableCell>{'Text'}</TableCell>
+            <TableCell>{'Text'}</TableCell>
+            <TableCell>{'Text'}</TableCell>
+            <TableCell>{'Text'}</TableCell>
           </TableRow>
         </TableBody>
       </>
