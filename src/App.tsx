@@ -1,11 +1,12 @@
-import { SignIn } from '@/components'
+import { Provider } from 'react-redux'
+
+import { Router } from '@/router'
+import { store } from '@/services/store'
 
 export function App() {
   return (
-    <div>
-      <SignIn />
-    </div>
+    <Provider store={store}>
+      <Router />
+    </Provider>
   )
 }
-
-export default App

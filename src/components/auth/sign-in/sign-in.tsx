@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
 import { Button, Card, Typography } from '@/components/ui'
 import { ControlledCheckbox, ControlledTextField } from '@/components/ui/controlled'
@@ -72,7 +73,7 @@ export const SignIn = () => {
           {`Don't have an account?`}
         </Typography>
         <div className={s.signUpLinkWrapper}>
-          <Typography as={'div'} className={s.signUpLink} to={'/sign-up'} variant={'link1'}>
+          <Typography as={Link} className={s.signUpLink} to={'/sign-up'} variant={'link1'}>
             Sign Up
           </Typography>
         </div>

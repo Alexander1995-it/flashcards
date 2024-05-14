@@ -7,11 +7,23 @@ import { z } from 'zod'
 
 import s from './sign-up.module.scss'
 
-const schema = z.object({
-  email: z.string().email(),
-  password: z.string().min(3),
-  passwordConfirmation: z.string().min(3),
-})
+const schema = z
+  .object({
+    email: z.string().email(),
+    password: z.string().min(3),
+    passwordConfirmation: z.string().min(3),
+  })
+  .superRefine((data, ctx) => {
+    if (data.password !== data.passwordConfirmation) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Passwords do not match',
+        path: ['passwordConfirmation'],
+      })
+    }
+
+    return data
+  })
 
 type FormValues = z.infer<typeof schema>
 
@@ -57,7 +69,7 @@ export const SignUp = () => {
         <ControlledTextField
           containerProps={{ className: s.passwordConfirmation }}
           control={control}
-          errorMessage={errors.password?.message}
+          errorMessage={errors.passwordConfirmation?.message}
           label={'Confirm Password'}
           name={'passwordConfirmation'}
           type={'password'}
