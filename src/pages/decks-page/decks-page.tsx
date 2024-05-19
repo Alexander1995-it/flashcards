@@ -1,4 +1,4 @@
-import { useGetDecksQuery } from '@/services/base-api.ts'
+import { useGetDecksQuery } from '@/services/base-api'
 
 export const DecksPage = () => {
   const result = useGetDecksQuery()

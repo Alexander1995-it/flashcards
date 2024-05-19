@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
 } from 'react-router-dom'
 
+import { Layout } from '@/components'
 import { DecksPage, SignInPage } from '@/pages'
 import { useMeQuery } from '@/services/auth/auth.service'
 
@@ -19,14 +20,19 @@ const privateRoutes: RouteObject[] = [
 const publicRoutes: RouteObject[] = [
   {
     element: <SignInPage />,
-    path: '/login',
+    path: '/sign-in',
   },
 ]
 const router = createBrowserRouter([
-  ...publicRoutes,
   {
-    children: privateRoutes,
-    element: <PrivateRoutes />,
+    children: [
+      ...publicRoutes,
+      {
+        children: privateRoutes,
+        element: <PrivateRoutes />,
+      },
+    ],
+    element: <Layout />,
   },
 ])
 

@@ -1,4 +1,4 @@
-import { baseApi } from '@/services/base-api.ts'
+import { baseApi } from '@/services/base-api'
 
 import { LoginArgs, User } from './auth.types'
 
